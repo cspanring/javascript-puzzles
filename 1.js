@@ -16,4 +16,5 @@ var ralph = new Dog('Ralph')
 ralph.bark()
 
 // in 1 second we want Ralph to bark again
-setTimeout( ralph.bark , 1000 )
+// The "this" problem
+setTimeout( ralph.bark.bind(ralph) , 1000 )
